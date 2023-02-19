@@ -15,6 +15,10 @@ public class MetricConverter {
         double feet = (meters/0.305)
         double inches = (meters*39.37)
 
+        if (meters<0){
+            System.out.println(meters + " is an Invalid Variable");
+        }
+
         System.out.print("Converted to miles: " + miles);
         System.out.print("Converted to miles: " + feet);
         System.out.print("Converted to miles: " + inches);
