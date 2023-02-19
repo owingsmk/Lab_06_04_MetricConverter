@@ -1,9 +1,10 @@
 import java.util.Scanner;
+import java.text.DecimalFormat; //decmial format for program
 
 public class MetricConverter {
     public static void main(String[] args) {
+        DecimalFormat df2 =new DecimalFormat(".00");
 
-        //Declare variables
 
         //Create scanner object
         Scanner input = new Scanner(System.in);
@@ -11,17 +12,17 @@ public class MetricConverter {
         System.out.print("Please give a measurement in meters: ");
         double meters = input.nextDouble(); //user input for needed variable
         //Formulas to figure meters to the variable needed
-        double miles = (meters/1609)
-        double feet = (meters/0.305)
-        double inches = (meters*39.37)
+        double miles = (meters/1609); //Declare variables
+        double feet = (meters/0.305);
+        double inches = (meters*39.37);
 
         if (meters<0){
             System.out.println(meters + " is an Invalid Variable");
         }
 
-        System.out.print("Converted to miles: " + miles);
-        System.out.print("Converted to miles: " + feet);
-        System.out.print("Converted to miles: " + inches);
+        System.out.println("Converted to miles: " + df2.format(miles));
+        System.out.println("Converted to miles: " + df2.format(feet));
+        System.out.println("Converted to miles: " + df2.format(inches));
 
     }
 }
